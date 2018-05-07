@@ -1,12 +1,12 @@
 <?php
 
 namespace Tests\Browser;
-use App\User;
+
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class CreateQuestion_Test extends DuskTestCase
+class viewComposerTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
@@ -15,21 +15,12 @@ class CreateQuestion_Test extends DuskTestCase
      */
     public function testExample()
     {
-        /*The user creates question by clicking on buttons
-        to test AJAX Calls*/
-
-        $this->browse(function ($browser)  {
+        $this->browse(function (Browser $browser) {
             $browser->visit('/login')
                 ->type('email', 'jc@123.com')
                 ->type('password', '123123')
                 ->press('Login')
-                ->clicklink('Create Question')
-                ->type('#body','test123')
-                ->click('button[type="submit"]')
-                ->assertPathIS('/home');
-
-
-
+                ->assertSeeLink('How to share data');
         });
     }
 }

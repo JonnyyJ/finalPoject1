@@ -16,7 +16,7 @@ class LoginTest extends DuskTestCase
      */
     public function testExample()
     {
-        /*Create a user then login to test
+        /*Create a user on app then login to test
         whether it can redirect to the home page*/
 
 
