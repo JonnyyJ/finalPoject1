@@ -79,16 +79,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Latest Questions
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <ul>
+                    @foreach($questionList as $question)
+                        <li class="list-group-item"><h5>{{ $question }}</h5></li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </body>

@@ -38,6 +38,7 @@ Route::resources([
     'questions' => 'QuestionController',
 ]);
 
+Route::get('/', 'SampleController@index');
 
 
 
