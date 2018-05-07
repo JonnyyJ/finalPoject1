@@ -3,18 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\user;
+use App\Answer;
+use App\Profile;
+use App\Question;
+
 
 class SampleController extends Controller
 {
+
+
+
     public function index()
     {
         $questionList = [
-            '123',
-            '321',
-            '111',
+            'Why laravel?',
+            'Why docker?',
+            'How to share data',
 
         ];
+        $latestQuestion = end($questionList);
 
-        return view('welcome', compact('questionList'));
+        return view('/welcome', compact('questionList','latestQuestion'));
     }
+
+
+
 }

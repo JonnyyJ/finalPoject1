@@ -76,18 +76,20 @@
                     @endauth
                 </div>
             @endif
+                <div class="content">
+                    <div class="title m-b-md">
+                        Laravel
+                    </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Latest Questions
+                    <div class="content">
+
+                        @foreach($questionList as $que)
+                            <li class="list-group-item"><h5>{{ $que }}</h5></li>
+                        @endforeach
+                    </div>
                 </div>
 
-                <ul>
-                    @foreach($questionList as $question)
-                        <li class="list-group-item"><h5>{{ $question }}</h5></li>
-                    @endforeach
-                </ul>
-            </div>
         </div>
+
     </body>
 </html>

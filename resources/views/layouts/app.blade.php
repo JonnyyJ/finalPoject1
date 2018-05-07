@@ -11,7 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer>
+
+    </script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -21,9 +24,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
+
+        <div class="container col-md-9 col-lg-9 pull-left">
 
 
             @guest
@@ -37,17 +42,16 @@
             @endguest
 
 
-
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
 
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
+
 
                 </ul>
 
@@ -59,18 +63,27 @@
                         <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                     @else
+                        <li><a class="nav-link" id="txt1" href="#">{{ $latestQuestion }}</a></li>
+
+
+
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 My Account <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @if (Auth::user()->profile)
-                                    <a class="dropdown-item" href="{{ route('profile.show', ['user_id' => Auth::user()->id,'profile_id' => Auth::user()->profile->id]) }}">My Profile</a>
+                                    <a class="dropdown-item"
+                                       href="{{ route('profile.show', ['user_id' => Auth::user()->id,'profile_id' => Auth::user()->profile->id]) }}">My
+                                        Profile</a>
 
                                 @else
-                                    <a class="dropdown-item" href="{{ route('profile.create', ['user_id' => Auth::user()->id]) }}">Create Profile</a>
+                                    <a class="dropdown-item"
+                                       href="{{ route('profile.create', ['user_id' => Auth::user()->id]) }}">Create
+                                        Profile</a>
                                 @endif
 
 
@@ -81,7 +94,8 @@
                                 </a>
 
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     @csrf
                                 </form>
                             </div>
@@ -94,12 +108,21 @@
 
     <main class="py-4">
         <div class="col-12">
-        @include('flash.error')
-        @include('flash.messages')
-        @include('flash.status')
+            @include('flash.error')
+            @include('flash.messages')
+            @include('flash.status')
         </div>
         @yield('content')
     </main>
+
+
+
+
+    </div>
+
+
 </div>
+
+
 </body>
 </html>
