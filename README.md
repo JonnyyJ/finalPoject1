@@ -3,23 +3,38 @@ Added two features on the original FAQ project:
 1.Feature:View composer
   Epic:Pass data
   User Story1: As a laravel developer, I would like to create a couple of new buttons on master page of layouts so I can show the data.
+  
   User Story2: As a laravel developer, I would like to make some simple routes so I can get the pages I want.
+  
   User Story3: As a laravel developer, I would like to make a new controller so I can extract data.
+  
   User Story4: As a laravel developer, I would like to use HTML method so I can 
+  
   User Story5: As a laravel developer,
+  
   User Story6: As a laravel developer,
+  
   User Story7: As a laravel developer,
+  
   User Story8: As a laravel developer,
+  
   User Story9: As a laravel developer,
+  
                 
 2.Feature:Laravel dusk
   Epic:Browser test
   User Story1: As a laravel developer,I would like to write a login test so I can confirm whether the home page is responsed.
+  
   User Story2: As a laravel developer,I would like to write a registration test so I can confirm whether the home page is responsed.
+  
   User Story3: As a laravel developer,I would like to write a creating question test so I can confirm whether the home page is responsed
+  
   User Story4: As a laravel developer,I would like to write a creating answer test so I can see the context of answer or not.
+  
   User Story5: As a laravel developer,I would like to write a welcome page test so I can see whether the data is passed.
+  
   User Story6: As a laravel developer,I would like to write a view composer test so I can confirm whether the data has been shared.
+  
 
 
 ## To run the FAQ project:
