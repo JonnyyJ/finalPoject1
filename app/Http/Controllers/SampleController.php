@@ -22,7 +22,7 @@ class SampleController extends Controller
             'How to share data',
 
         ];
-        $latestQuestion = end($questionList);
+
 
         return view('/welcome', compact('questionList','latestQuestion'));
     }
