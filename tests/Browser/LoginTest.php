@@ -1,13 +1,14 @@
 <?php
 
 namespace Tests\Browser;
-
+use App\User;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class LoginTest extends DuskTestCase
 {
+    use DatabaseMigrations;
     /**
      * A Dusk test example.
      *
@@ -15,9 +16,16 @@ class LoginTest extends DuskTestCase
      */
     public function testExample()
     {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('Laravel');
+        /*Create a user then login to test
+        whether it can redirect to the home page*/
+
+
+            $this->browse(function ($browser)  {
+                $browser->visit('/login')
+                    ->type('email', 'jc@123.com')
+                    ->type('password', '123123')
+                    ->press('Login')
+                    ->assertPathIs('/home');
         });
     }
 }
