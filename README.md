@@ -1,7 +1,9 @@
 Added two features on the original FAQ project:
 
 1.Feature:View composer
+
   Epic:Pass data
+  
   User Story1: As a laravel developer, I would like to create a couple of new buttons on master page of layouts so I can show the data.
   
   User Story2: As a laravel developer, I would like to make some simple routes so I can get the pages I want.
@@ -22,7 +24,9 @@ Added two features on the original FAQ project:
   
                 
 2.Feature:Laravel dusk
+
   Epic:Browser test
+  
   User Story1: As a laravel developer,I would like to write a login test so I can confirm whether the home page is responsed.
   
   User Story2: As a laravel developer,I would like to write a registration test so I can confirm whether the home page is responsed.
