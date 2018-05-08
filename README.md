@@ -18,12 +18,15 @@ Added two features on the original FAQ project:
   Epic:Browser test
   
   User Story1: As a tester. I would like to Run: composer require --dev laravel/dusk so I can install dusk package.
+  
    
   User Story2: As a tester, I would like to Run: php artisan dusk: install so I can created the browser directory. 
+  
   
   User Story3: As a tester, I would like to change the value of APP_URL which in my .env file to https://finaljc123.herokuapp.com/
   
   so I can set the running environment.
+  
   
   User Story4: As a tester, I would like to Run: php artisan dusk to so I can run t he browser test.
   
