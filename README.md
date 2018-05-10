@@ -35,7 +35,7 @@ Added two features on the original FAQ project:
 
 ## To run the FAQ project:
 
-1. git clone https://github.com/NJIT-WIS/faq.git
+1. git clone https://github.com/JonnyyJ/finalPoject1.git
 2. CD into FAQ and run composer install
 3. cp .env.example to .env
 4. run: php artisan key:generate
